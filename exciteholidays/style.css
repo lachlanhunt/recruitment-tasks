@@ -1,0 +1,88 @@
+html { margin: 0; padding: 0; background: white; color: black; font: 16px/1.5 Helvetica, sans-serif; }
+body { margin: 0; padding: 0; }
+#content { margin: 0 auto; padding: 1.5em 0 4.5em; width: 900px;  }
+
+h1, h2, h3, h4, h5, h6 { margin-top:0; margin-bottom:0; }
+h1 { font-size: 1.5em; padding: 0.25em 0; }
+h2 { font-size:1.33333em; padding: 0.375em 0; }
+h3 { font-size:1.16667em; padding: 0.535714em 0; }
+h4 { font-size: 1em; padding: 0.75em 0; font-weight: bold; }
+h5 { font-size: 1em; padding: 0.75em 0; font-weight: bold; font-variant: small-caps; }
+h6 { font-size: 1em; padding: 0.75em 0; font-weight: normal; font-variant: small-caps; }
+
+p { margin: 0; text-align: justify; }
+p+p { margin-top: 1.5em; }
+
+#pageheader { margin: 0 auto; padding: 0 25px; width: 850px; height: 4.5em; }
+#pageheader h1 { float: left; text-indent: -2000px; background: #92C0EF url(logo.png) center no-repeat; background-size: contain; height: 100%; width: 144px; padding: 0; }
+
+#login-links { float: right; padding: 0; margin: 0; }
+#login-links a { padding: 1.5em 25px; float: left; }
+#login-links a:hover { background: #F9F9F9; }
+
+#global-nav ul,
+#global-nav li { float: left; margin: 0; padding: 0; display: block; }
+#global-nav li ul { display: none; position: absolute; top: 4.5em; background: #EEE; }
+#global-nav li:hover { background: #EEE; }
+#global-nav li:hover ul { display: block; }
+#global-nav li li { float: none; }
+
+#global-nav>ul>li>a { display: block; padding: 1.5em 25px; }
+#global-nav li li a { padding: 0 25px; }
+#global-nav a:hover { background: #F9F9F9; }
+
+#section-nav, #pagefooter { background: #EEE; }
+#section-nav div, #pagefooter div { margin: 0 auto; padding: 0 25px; width: 850px; }
+
+#section-nav ul { margin: 0 auto; padding: 0; display: inline; }
+#section-nav li { margin: 0; padding: 0; float: left; display: block; }
+#section-nav a { padding: 0 25px; height: 1.5em; display: block; }
+#section-nav a:hover { background: #F9F9F9; }
+#section-nav form { float: right; }
+#section-nav #search { width: 250px; }
+
+header a, nav a { text-decoration: none; }
+
+#media figure { float: left; height: 15em; width: 250px; margin: 0 25px 1.5em; padding: 0; overflow: auto; }
+
+#tabbed { padding: 0 25px; margin-bottom: 1.5em; }
+#tabbed figcaption { width: 550px; display: block; margin: 0 auto; background: #EEE; padding: .75em 25px; height: 3em; }
+
+.tabs, .tabs li { margin: 0; padding: 0; }
+.tabs li { display: inline-block; padding: .75em 24px; border: 1px solid black; margin-top: -1px; cursor: pointer;
+border-radius: 10px 10px 0 0; background: #EEE; }
+.tabs li:hover { background: #F9F9F9; }
+.tabs li.active, .tab-pane { background: #92C0EF; }
+.tabs li.active { border-bottom-color: #92C0EF; }
+.tab-pane { border: 1px solid black; margin: -1px 0 -1px; padding: 1.5em 25px; }
+
+.scriptenabled .tab-pane, .scriptenabled .tab-pane h2 { display: none; }
+.scriptenabled .tab-pane.active { display: block; }
+.scriptenabled .carousel { position: relative; }
+.scriptenabled .carousel div { position: relative; overflow: hidden; height: 472px; width: 600px; margin: 0 auto;  }
+.scriptenabled .carousel figure { position: absolute; top: 0; left: 100%; margin: 0; transition: left 0.5s linear; }
+.scriptenabled .carousel figure.prev { left: -600px; }
+.scriptenabled .carousel figure.active { left: 0; }
+
+.carousel .button { display: block; color: transparent; background: rgba(255, 255, 255, 0.2) center no-repeat; background-size: 3em;
+                    position: absolute; height: 100%; width: 100px; top: 0; cursor: pointer; }
+.carousel .button.next { right: 0; background-image: url(right.png); }
+.carousel .button.prev { left: 0; background-image: url(left.png); }
+.carousel .button.disabled { background-image: none; cursor: default; }
+
+/* Clear floats */
+#section-nav::after, #media::after { content: "."; clear: both; height: 0; visibility: hidden; display: block; }
+
+figure img { display: block; margin: 0 auto; }
+figure iframe { border: 0; }
+#columns { -moz-columns: 2; -webkit-columns: 2; columns: 2;
+           -moz-column-gap: 25px; -webkit-column-gap: 25px; column-gap: 25px;
+           padding: 0 25px; }
+
+/* Sticky footer */
+html { height: 100%; }
+body {  min-height: 100%; position: relative; }
+#pagefooter { position: absolute; bottom: 0; padding: .75em 0; width: 100%; }
+#pagefooter p { margin: 0; }
+
+x#content { display: none; }

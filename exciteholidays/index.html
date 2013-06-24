@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<title>Excite Holidays Task</title>
+<link rel="stylesheet" href="style.css">
+<script src="carousel.js"></script>
+<script src="tabs.js"></script>
+<script>
+window.onload = function() {
+	var carousel = new Carousel(document.querySelector(".carousel"));
+	var tabs = new Tabs(document.querySelector("#tabbed"));
+	document.body.className = "scriptenabled"
+}
+</script>
+<body>
+	<header id="pageheader">
+		<h1>Logo</h1>
+
+		<p id="login-links"><a href="">Login</a> <a href="">Sign up</a></p>
+
+		<nav id="global-nav">
+			<ul>
+				<li><a href="">Section 1</a>
+					<ul>
+						<li><a href="">Section 1 Item 1.1</a></li>
+						<li><a href="">Section 1 Item 1.2</a></li>
+						<li><a href="">Section 1 Item 1.3</a></li>
+						<li><a href="">Section 1 Item 1.4</a></li>
+					</ul>
+				</li>
+				<li><a href="">Section 2</a>
+					<ul>
+						<li><a href="">Section 2 item 2.1</a></li>
+						<li><a href="">Section 2 item 2.2</a></li>
+						<li><a href="">Section 2 item 2.3</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<nav id="section-nav">
+		<div>
+			<form method="get" action="">
+				<input type="search" id="search" placeholder="Search" name="q">
+			</form>
+			<ul>
+				<li><a href="">Item 1</a></li>
+				<li><a href="">Item 2</a></li>
+				<li><a href="">Item 3</a></li>
+				<li><a href="">Item 4</a></li>
+			</ul>
+		</div>
+	</nav>
+<div id="content">
+	<section id="media">
+		<figure>
+			<img src="placeholder.png" height="240" width="250" alt="Placeholder alternative text">
+		</figure>
+		<figure>
+			<img src="placeholder.png" height="192" width="250" alt="Placeholder alternative text">
+			<figcaption>This is an example caption for this image.</figcaption>
+		</figure>
+		<figure>
+			<h2>News Item</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum nisi vel ornare porttitor.
+		   Suspendisse ac ultricies diam, placerat bibendum risus.</p>
+		   <p>Nulla pellentesque, nisi et blandit aliquet, nulla arcu auctor ligula.</p>
+		</figure>
+		<figure>
+			<img src="placeholder.png" height="240" width="250" alt="Placeholder alternative text">
+		</figure>
+		<figure>
+ 			<iframe width="250" height="144" src="http://www.youtube.com/embed/a4Fv98jttYA" allowfullscreen></iframe>
+			<figcaption>Short description of embedded video goes here.</figcaption>
+		</figure>
+		<figure>
+			<img src="placeholder.png" height="240" width="250" alt="Placeholder alternative text">
+		</figure>
+	</section>
+
+	<section id="tabbed">
+		<div class="tab-pane">
+			<h2>Tab 1</h2>
+			<div class="carousel">
+				<div>
+					<figure>
+						<img src="picture1.png" alt="Sample alternate text 1">
+						<figcaption>Sample picture 1</figcaption>
+					</figure>
+					<figure>
+						<img src="picture2.png" alt="Sample alternate text 2">
+						<figcaption>Sample picture 2</figcaption>
+					</figure>
+					<figure>
+						<img src="picture3.png" alt="Sample alternate text 3">
+						<figcaption>Sample picture 3</figcaption>
+					</figure>
+				</div>
+			</div>
+		</div>
+		<div class="tab-pane">
+			<h2>Tab 2</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum nisi vel ornare porttitor.
+			   Suspendisse ac ultricies diam, placerat bibendum risus. Etiam eleifend quam vel arcu egestas, ultricies
+			   lacinia dolor vulputate. Maecenas viverra bibendum magna lacinia lobortis. Proin non elementum tellus.
+			   Suspendisse lorem tortor, porta vel ultrices quis, feugiat ut orci. Donec adipiscing laoreet mattis.
+			   Vestibulum pulvinar urna non orci tempor, ac condimentum nunc semper. Maecenas fringilla nisl nisl, vitae
+			   luctus mi dignissim ut.</p>
+		</div>
+		<div class="tab-pane">
+			<h2>Tab 3</h2>
+			<p>Morbi auctor justo ipsum. Nulla in metus nec nunc tempor dapibus eu nec metus. Donec porttitor mauris
+			   eget enim aliquam, vitae ultricies sapien ultricies. Vestibulum ante ipsum primis in faucibus orci luctus
+			   et ultrices posuere cubilia Curae; Fusce interdum lacinia dolor in mattis. Nulla luctus pharetra
+			   consectetur. Aliquam hendrerit sapien vitae interdum adipiscing. Donec et sem et risus pulvinar ornare.
+			   Praesent a libero tempor, volutpat augue sed, varius est. Suspendisse pretium eros sit amet nibh
+			   ullamcorper volutpat. Suspendisse potenti. Integer ante felis, adipiscing sed lacus quis, dapibus cursus
+			   justo. Nullam sollicitudin urna tortor, id tristique sem vulputate non. Integer iaculis placerat
+			   fringilla. Sed luctus fermentum eros.</p>
+		</div>
+		<div class="tab-pane">
+			<h2>Tab 4</h2>
+			<p>Praesent a eleifend tortor. Nullam consequat imperdiet tincidunt. Aliquam congue leo vel auctor rutrum.
+			   Nulla pellentesque, nisi et blandit aliquet, nulla arcu auctor ligula, sed tristique ante purus non
+			   lacus. Pellentesque lacinia odio vitae lectus imperdiet congue. Vestibulum pharetra lorem quis tortor
+			   dapibus eleifend. Cras ac molestie tortor, nec vehicula nisi. Ut et tortor et neque sodales volutpat.
+			   Morbi blandit et mi in lobortis. Pellentesque commodo iaculis feugiat. Duis porta erat arcu, vel
+			   hendrerit orci volutpat mollis.</p>
+		</div>
+	</section>
+
+	<section id="columns">
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum nisi vel ornare porttitor.
+		   Suspendisse ac ultricies diam, placerat bibendum risus. Etiam eleifend quam vel arcu egestas, ultricies
+		   lacinia dolor vulputate. Maecenas viverra bibendum magna lacinia lobortis. Proin non elementum tellus.
+		   Suspendisse lorem tortor, porta vel ultrices quis, feugiat ut orci. Donec adipiscing laoreet mattis.
+		   Vestibulum pulvinar urna non orci tempor, ac condimentum nunc semper. Maecenas fringilla nisl nisl, vitae
+		   luctus mi dignissim ut.</p>
+
+		<p>Morbi auctor justo ipsum. Nulla in metus nec nunc tempor dapibus eu nec metus. Donec porttitor mauris
+		   eget enim aliquam, vitae ultricies sapien ultricies. Vestibulum ante ipsum primis in faucibus orci luctus
+		   et ultrices posuere cubilia Curae; Fusce interdum lacinia dolor in mattis. Nulla luctus pharetra
+		   consectetur. Aliquam hendrerit sapien vitae interdum adipiscing. Donec et sem et risus pulvinar ornare.
+		   Praesent a libero tempor, volutpat augue sed, varius est. Suspendisse pretium eros sit amet nibh
+		   ullamcorper volutpat. Suspendisse potenti. Integer ante felis, adipiscing sed lacus quis, dapibus cursus
+		   justo. Nullam sollicitudin urna tortor, id tristique sem vulputate non. Integer iaculis placerat
+		   fringilla. Sed luctus fermentum eros.</p>
+
+		<p>Praesent a eleifend tortor. Nullam consequat imperdiet tincidunt. Aliquam congue leo vel auctor rutrum.
+		   Nulla pellentesque, nisi et blandit aliquet, nulla arcu auctor ligula, sed tristique ante purus non
+		   lacus. Pellentesque lacinia odio vitae lectus imperdiet congue. Vestibulum pharetra lorem quis tortor
+		   dapibus eleifend. Cras ac molestie tortor, nec vehicula nisi. Ut et tortor et neque sodales volutpat.
+		   Morbi blandit et mi in lobortis. Pellentesque commodo iaculis feugiat. Duis porta erat arcu, vel
+		   hendrerit orci volutpat mollis.</p>
+
+		<p>Donec elementum metus massa, vel tincidunt quam vestibulum eget. Vivamus sed scelerisque quam. Maecenas
+		   massa ipsum, pellentesque pharetra velit at, faucibus posuere nibh. In tempor lorem vitae leo iaculis
+		   sollicitudin. Praesent malesuada eros a dignissim posuere. Fusce id justo at elit porttitor ultricies.
+		   Nunc ut erat dui.</p>
+
+		<p>Proin faucibus et urna quis bibendum. Maecenas lacinia congue turpis eu dapibus. Duis porttitor
+		   malesuada ultricies. Suspendisse turpis tellus, varius ut nulla vitae, convallis hendrerit arcu. Ut
+		   iaculis sapien nec sem condimentum, quis porta enim consectetur. Ut interdum nec quam sed viverra.
+		   Integer nisl nulla, convallis ut odio in, blandit pellentesque sapien. Nam sollicitudin eros lorem, ut
+		   molestie quam dignissim in. Proin a interdum magna, vel fringilla nulla. Vestibulum vel tellus ac magna
+		   convallis ornare. In vitae quam eu tortor rutrum semper. </p>
+
+	</section>
+
+</div>
+<footer id="pagefooter">
+	<div>
+		<p><a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/"><img src="http://i.creativecommons.org/p/zero/1.0/80x15.png" height="15" width="80" alt="CC0"></a>
+		   © 2013 Lachlan Hunt</p>
+	</div>
+</footer>
+</body>
