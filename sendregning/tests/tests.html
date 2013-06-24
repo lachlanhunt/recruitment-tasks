@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>Selectors-API Test Suite: HTML with Selectors Level 3</title>
+
+<script src="testharness.js"></script>
+<script src="testharnessreport.js"></script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="../sendregning.js"></script>
+
+<script>
+var username = "",
+	password = "";
+
+var tests = {
+	"login": async_test("Login"),
+	"recipientList": async_test("Recipient list"),
+	"recipientNumber": async_test("Recipient by number"),
+	"balance": async_test("Recipient balance"),
+	"invoices": async_test("Recipient invoices")
+};
+
+var sws = new SendRegning(username, password, function success(data, textStatus, jqXHR) {
+	tests.login.done();
+}, function error(jqXHR, textStatus, err) {
+	tests.login.step(function() {
+		assert_unreached("Failed to login: " + err + ".")
+	})
+	tests.login.done();
+});
+
+sws.selectRecipients(function success(data, textStatus, jqXHR) {
+	tests.recipientList.step(function() {
+		assert_own_property(data, "recipients", "The returned JSON data should be a recipient list.");
+	})
+	tests.recipientList.done();
+}, function error(jqXHR, textStatus, err) {
+	tests.recipientList.step(function() {
+		assert_unreached("Failed to load recipients: " + err + ".")
+	})
+	tests.recipientList.done();
+});
+
+sws.selectRecipientByNumber(1, function success(data, textStatus, jqXHR) {
+	tests.recipientNumber.step(function() {
+		assert_own_property(data, "recipients", "The returned JSON data should be a recipient list.");
+		assert_equals(data.recipients.recipient.optional.recipientNo, "1", "The recipient number should be as requested.");
+	})
+	tests.recipientNumber.done();
+}, function error(jqXHR, textStatus, err) {
+	tests.recipientNumber.step(function() {
+		assert_unreached("Failed to load specified recipient: " + err + ".")
+	})
+	tests.recipientNumber.done();
+});
+
+sws.selectBalance(1, function success(data, textStatus, jqXHR) {
+	tests.balance.step(function() {
+		assert_own_property(data, "balance", "The returned JSON data should be a balance statement.");
+		assert_equals(data.balance.recipients.recipient.no, "1", "The recipient number should be as requested.");
+	})
+	tests.balance.done();
+}, function error(jqXHR, textStatus, err) {
+	tests.balance.step(function() {
+		assert_unreached("Failed to load balance for specified recipient: " + err + ".")
+	})
+	tests.balance.done();
+});
+
+sws.selectInvoices(1, function success(data, textStatus, jqXHR) {
+	tests.invoices.step(function() {
+		assert_own_property(data, "invoices", "The returned JSON data should be an invoice list.");
+	})
+	tests.invoices.done();
+}, function error(jqXHR, textStatus, err) {
+	tests.invoices.step(function() {
+		assert_unreached("Failed to load invoices for specified recipient: " + err + ".")
+	})
+	tests.invoices.done();
+});
+
+
+</script>
+<div id="log"></div>

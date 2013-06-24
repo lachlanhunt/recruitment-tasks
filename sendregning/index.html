@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Send Regning Task</title>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <!-- Using the Model/View/Controller design pattern -->
+    <script src="sendregning.js"></script>
+    <script src="ui.js"></script>
+    <script src="control.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>SendRegning Account</h1>
+    <p>gjør det enkelt</p>
+</header>
+
+<section id="login">
+    <h2>Login</h2>
+    <p><label for="email">Email:</label>
+       <input id="email" name="email" type="email" placeholder="user@example.com" value=""></p>
+    <p><label for="password">Password:</label>
+       <input type="password" id="password" name="password" placeholder="Password" value=""></p>
+    <input type="button" value="Login">
+    <p class="status"></p>
+</section>
+
+<section id="recipients" hidden>
+    <h2>Recipients</h2>
+
+    <table>
+        <thead>
+            <tr><th>Name</th><th>Address</th><th>Email</th></tr>
+        </thead>
+        <tbody>
+            <tr><td class="name"><a href=""></a></td><td class="address"></td>
+                <td class="email"><a href=""></a></td></tr>
+        </tbody>
+    </table>
+    <ul id="pagination"></ul>
+</section>
+
+<section id="profile" hidden>
+    <h2 id="name">John Smith</h2>
+    <p id="address">
+        <span class="address1">Send Regning, Unit 4 Agresso</span><br>
+        <span class="address2">Gjerdrums vei 4</span><br>
+        <span class="zip">0484</span>
+        <span class="city">Oslo</span>
+        <span class="country">NORGE</span>
+    </p>
+    <p id="balance">Balance: <span>0.00</span> NOK</p>
+    <div id="invoices">
+        <p><a id="show-invoices" href="#0" data-recipientno="0">Load invoices</a></p>
+        <table hidden>
+            <thead>
+                <th>Invoice No.</th><th>Invoice Date</th><th>Due Date</th><th>Total</th><th>Status</th>
+            </thead>
+            <tbody>
+                <td class="invoiceNo"></td>
+                <td class="invoiceDate"></td>
+                <td class="dueDate"></td>
+                <td class="total"></td>
+                <td class="state"></td>
+            </tbody>
+        </table>
+    </div>
+    <p id="close"><button id="close">Close</button></p>
+
+</section>
+</body>
+</html>
