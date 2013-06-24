@@ -60,7 +60,7 @@ border-radius: 10px 10px 0 0; background: #EEE; }
 .scriptenabled .tab-pane.active { display: block; }
 .scriptenabled .carousel { position: relative; }
 .scriptenabled .carousel div { position: relative; overflow: hidden; height: 472px; width: 600px; margin: 0 auto;  }
-.scriptenabled .carousel figure { position: absolute; top: 0; left: 100%; margin: 0; transition: left 0.5s linear; }
+.scriptenabled .carousel figure { position: absolute; top: 0; left: 100%; margin: 0; -webkit-transition: left 0.5s linear; transition: left 0.5s linear; }
 .scriptenabled .carousel figure.prev { left: -600px; }
 .scriptenabled .carousel figure.active { left: 0; }
 
